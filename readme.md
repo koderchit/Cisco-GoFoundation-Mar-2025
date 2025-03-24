@@ -5,9 +5,9 @@
 
 ## Schedule
 - Commence      : 09:00 AM
-- Tea Break     : 10:30 AM
-- Lunch Break   : 12:30 PM
-- Tea Break     : 03:00 PM
+- Tea Break     : 10:30 AM (20 mins)
+- Lunch Break   : 12:30 PM (1 hour)
+- Tea Break     : 03:00 PM (20 mins)
 - Wind up       : 05:00 PM
 
 ## Methodology
@@ -63,3 +63,13 @@ go version
     - Standard library support
         - "sync" package
         - "sync/atomic" package
+
+## Compilation
+```shell
+go build [filename.go]
+```
+
+## Compile & Execute
+```shell
+go run [filename.go]
+```
