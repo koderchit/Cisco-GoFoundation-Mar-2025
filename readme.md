@@ -163,3 +163,12 @@ GOOS=[target_os] GOARCH=[target_arch] go build [filename.go]
 ## Constant
 - Can have unused constants even in "function" scope
 
+## Functions
+- Functions can return more than one result
+- Variadic functions
+- Anonymous functions
+- Higher order functions
+    - Assign a function as a value to a variable
+    - Pass functions as arguments
+    - Return functions as return values
+
