@@ -173,3 +173,9 @@ GOOS=[target_os] GOARCH=[target_arch] go build [filename.go]
     - Return functions as return values
 - Deferred functions
 
+## Collection Types
+### Array
+- Fixed sized typed collection
+### Slice
+### Map
+
