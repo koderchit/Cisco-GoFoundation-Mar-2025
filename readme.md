@@ -171,4 +171,5 @@ GOOS=[target_os] GOARCH=[target_arch] go build [filename.go]
     - Assign a function as a value to a variable
     - Pass functions as arguments
     - Return functions as return values
+- Deferred functions
 
