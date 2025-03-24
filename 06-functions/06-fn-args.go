@@ -24,6 +24,9 @@ func exec(fnName string) {
 func main() {
 	exec(f1)
 	exec(f2)
+	exec(func() {
+		fmt.Println("anonymous fn invoked")
+	})
 }
 
 func exec(fn func()) {
