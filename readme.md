@@ -159,3 +159,7 @@ GOOS=[target_os] GOARCH=[target_arch] go build [filename.go]
     - Can have "unused" variables
 - Function scope
     - Cannot have "unused" variables
+
+## Constant
+- Can have unused constants even in "function" scope
+
