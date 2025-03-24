@@ -23,6 +23,7 @@ func divide(multiplier, divisor int) (int, int) {
 }
 */
 
+// named results
 func divide(multiplier, divisor int) (quotient, remainder int) { /* quotient & remainder are declared and initialized */
 	quotient = multiplier / divisor
 	remainder = multiplier % divisor
