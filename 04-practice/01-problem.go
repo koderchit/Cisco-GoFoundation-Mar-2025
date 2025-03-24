@@ -1,5 +1,6 @@
 /*
-Write simple program that prints the prime numbers between 2 - 100
+Accept a range from the user
+Write simple program that prints the prime numbers between the given range
 */
 
 package main
@@ -7,8 +8,12 @@ package main
 import "fmt"
 
 func main() {
+	var start, end int
+	fmt.Println("Enter the start and the end (seperated by space)")
+	fmt.Scanln(&start, &end)
+	fmt.Printf("Prime numbers between %d and %d\n", start, end)
 LOOP:
-	for n := 2; n <= 100; n++ {
+	for n := start; n <= end; n++ {
 		for i := 2; i <= (n / 2); i++ {
 			if n%i == 0 {
 				continue LOOP
