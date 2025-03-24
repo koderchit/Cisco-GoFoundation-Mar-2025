@@ -177,5 +177,8 @@ GOOS=[target_os] GOARCH=[target_arch] go build [filename.go]
 ### Array
 - Fixed sized typed collection
 ### Slice
+- Varying sized typed collection
+- Use "append()" to add a new item
+- Use "len()" to get the size
 ### Map
 
