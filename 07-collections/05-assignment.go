@@ -14,15 +14,27 @@ func main() {
 	var start, end int
 	fmt.Println("Enter the start and the end (seperated by space)")
 	fmt.Scanln(&start, &end)
+	primes := genPrimes(start, end)
 	fmt.Printf("Prime numbers between %d and %d\n", start, end)
-LOOP:
-	for n := start; n <= end; n++ {
-		for i := 2; i <= (n / 2); i++ {
-			if n%i == 0 {
-				continue LOOP
-			}
-
-		}
-		fmt.Println("Prime :", n)
+	for _, primeNo := range primes {
+		fmt.Println("Prime :", primeNo)
 	}
+}
+
+func genPrimes(start, end int) []int {
+	primes := make([]int, 0)
+	for no := start; no <= end; no++ {
+		if isPrime(no) {
+			primes = append(primes, no)
+		}
+	}
+	return primes
+}
+func isPrime(no int) bool {
+	for i := 2; i <= (no / 2); i++ {
+		if no%i == 0 {
+			return false
+		}
+	}
+	return true
 }
