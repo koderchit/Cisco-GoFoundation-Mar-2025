@@ -10,6 +10,7 @@ import (
 
 func main() {
 	fmt.Println("App executed!")
+	greet("Magesh") //ops.go
 	fmt.Println(calculator.Add(100, 200))
 	fmt.Println(calculator.Subtract(100, 200))
 	fmt.Println("Op Count :", calculator.OpCount())

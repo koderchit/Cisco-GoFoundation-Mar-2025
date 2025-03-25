@@ -216,6 +216,19 @@ GOOS=[target_os] GOARCH=[target_arch] go build [filename.go]
 ```shell
 go mod init [repo_path/module_name]
 ```
+
+##### To run a module
+```shell
+go run .
+```
+
+##### To build a module
+```shell
+go build .
+# OR
+go build -o [binary_name] .
+```
+
 ### Package
 - internal organization of a module
 - a folder with a collection of .go files
@@ -223,4 +236,46 @@ go mod init [repo_path/module_name]
 - the package is imported with the complete module reference
 - All public entity names must start with uppercase 
 
+### 3rd party modules/packages
+#### To download and add reference 
+```shell
+go get [repo_path/module_name]
+```
+[ Code is downloaded to '$GOPATH/pkg' folder]
+
+##### To upgrade the dependencies to the latest version
+```shell
+go get -u [repo_path/module_name]
+```
+
+##### To update the go.mod file 
+```shell
+go mod tidy
+```
+##### To download the modules referenced in the go.mod file
+```shell
+go mod download
+```
+##### To localize the dependencies
+```shell
+go mod vendor
+``` 
+
+##### To list all the dependencies
+```shell
+go mod graph
+```
+
+##### To list all modules in use
+```shell
+go list -m all
+```
+
+##### To list all packages in use
+```shell
+go list all
+```
+
+##### Module command reference
+- https://go.dev/ref/mod
 
