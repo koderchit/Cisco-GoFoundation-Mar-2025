@@ -202,4 +202,25 @@ GOOS=[target_os] GOARCH=[target_arch] go build [filename.go]
 ### Recover
 - "recover()" gives access to error that resulted in the panic
 
+## Modularity
+### Module
+- Any code that has to be versioned and deployed together
+- A folder with go.mod file
+#### go.mod
+- manifest file of the module
+    - name of the module
+        - should include the complete repo path (advisable)
+    - go version targetted
+    - list of dependencies
+##### Create a module
+```shell
+go mod init [repo_path/module_name]
+```
+### Package
+- internal organization of a module
+- a folder with a collection of .go files
+- can also be nested
+- the package is imported with the complete module reference
+- All public entity names must start with uppercase 
+
 
