@@ -183,5 +183,15 @@ GOOS=[target_os] GOARCH=[target_arch] go build [filename.go]
 ![image](./images/slices.png)
 ### Map
 - Dynamic sized Typed Collection of Key/Value pairs
-- 
+
+## Error handling
+- errors are just values in Go
+- errors are not "thrown" but "returned" from a function
+- By convention, an error is a value implementing "error" interface
+- Ways of creating an error
+    - Using the following factory functions
+        - errors.New()
+        - fmt.Errorf()
+    - Custom type implementing "error" interface
+
 
