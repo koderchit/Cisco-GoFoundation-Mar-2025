@@ -9,6 +9,7 @@ var ErrF1 = errors.New("f1 error")
 var ErrF2 = errors.New("f2 error")
 
 func main() {
+
 	e := f1()
 	if errors.Is(e, ErrF1) {
 		fmt.Println("Error occured in f1()")

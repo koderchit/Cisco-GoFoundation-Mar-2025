@@ -194,4 +194,12 @@ GOOS=[target_os] GOARCH=[target_arch] go build [filename.go]
         - fmt.Errorf()
     - Custom type implementing "error" interface
 
+## Panic & Recovery
+### Panic
+- The state of the application where the application execution cannot proceed further
+- Use "panic()" to programmatically raise a panic
+- A panic is typically raised with an error
+### Recover
+- "recover()" gives access to error that resulted in the panic
+
 
