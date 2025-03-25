@@ -57,12 +57,12 @@ func main() {
 	// references using pointers
 	var p1Ptr *Product
 	p1Ptr = &p1
-	// No need to dererence to access the members of a pointer to a struct
+	// No need to dererence to access the members of a pointer to a struct and members can be accessed directly using the '.' notation
 	fmt.Println(p1Ptr.Id, p1Ptr.Name, p1Ptr.Cost)
 
 	fmt.Println("Before applying discount")
 	fmt.Println("p1 : ", Format(p1))
-	ApplyDiscount( /* ? */ ) // (10%)
+	ApplyDiscount(&p1, 10) // (10%)
 	fmt.Println("After applying discount")
 	fmt.Println("p1 : ", Format(p1))
 
@@ -72,6 +72,6 @@ func Format(p Product) string {
 	return fmt.Sprintf("Id = %d, Name = %q, Cost = %0.2f", p.Id, p.Name, p.Cost)
 }
 
-func ApplyDiscount( /*  */ ) /* no return */ {
-	// apply the discount (percentage) on the given product
+func ApplyDiscount(p *Product, discountPercentage float64) /* no return */ {
+	p.Cost = p.Cost * ((100 - discountPercentage) / 100)
 }
