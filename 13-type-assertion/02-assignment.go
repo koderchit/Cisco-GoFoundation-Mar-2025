@@ -5,6 +5,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 func main() {
@@ -19,7 +20,23 @@ func main() {
 	fmt.Println(sum(10, 20, []any{30, "40", "abc", []int{50, 60}})) //=> 210
 	fmt.Println(sum())                                              //=> 0
 }
-
-func sum( /* ? */ ) int {
-	/* ? */
+func sum(list ...any) int {
+	var result int
+	for _, x := range list {
+		switch val := x.(type) {
+		case int:
+			result += val
+		case string:
+			if no, err := strconv.Atoi(val); err == nil {
+				result += no
+			}
+		case []int:
+			for _, item := range val {
+				result += item
+			}
+		case []any:
+			result += sum(val...)
+		}
+	}
+	return result
 }
