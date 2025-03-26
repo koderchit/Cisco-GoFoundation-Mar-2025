@@ -31,11 +31,9 @@ func sum(list ...any) int {
 				result += no
 			}
 		case []int:
-			var anyList []any
 			for _, item := range val {
-				anyList = append(anyList, item)
+				result += item
 			}
-			result += sum(anyList...)
 		case []any:
 			result += sum(val...)
 		}
