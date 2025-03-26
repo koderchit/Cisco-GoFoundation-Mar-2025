@@ -294,3 +294,31 @@ go run --race [program.go]
 ```shell
 go build --race [program.go]
 ```
+
+### Channels
+- data type designed to enable communication between goroutines
+#### Declaration
+```go
+var ch chan int
+```
+#### Initailization
+```go
+ch = make(chan int)
+```
+#### Declaration & Initialization
+```go
+var ch chan int = make(chan int)
+// OR
+var ch = make(chan int)
+// OR
+ch := make(chan int)
+```
+#### Channel Operator ( <- )
+##### Send Operation
+```go
+ch <- 100
+```
+##### Receive Operation
+```go
+result := <-ch
+```
