@@ -8,8 +8,10 @@ import (
 
 func main() {
 	wg := &sync.WaitGroup{}
-	wg.Add(1)
-	go f1(wg) // scheduling the execution of "f1" through the scheduler
+	for range 20 {
+		wg.Add(1)
+		go f1(wg) // scheduling the execution of "f1" through the scheduler
+	}
 	f2()
 	wg.Wait() // block until the counter becomes 0 (default = 0)
 }
